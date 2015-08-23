@@ -1,0 +1,46 @@
+% % clc ; % clearing the command window
+% g=zeros(0,10);
+% num = input(' Enter the number of photos to be taken: ');
+% intervel = input(' Enter the time(seconds) gap between succeessive photos: ');
+% photosave = input(' Do you want to save the files(y/n): ','s');
+% disp('Please wait...');
+% 
+% obj = videoinput('winvideo',1);
+% preview(obj);
+% disp('You can adjust the video settings using your normal video console and after it press any key to start.');
+% pause;
+% disp('First shot will taken after 1 second');
+% 
+% pause(1);
+% for i=1:num
+% figure;
+% img=getsnapshot(obj);
+% image(img);
+% if(photosave == 'y')
+% filephoto= ['photo',int2str(i),'.jpg'];
+% imwrite(img,filephoto,'jpg');
+% 
+% end
+% end
+% disp('The program successfully taken the photos');
+% 
+% 
+% 
+% for i=1:num
+% img=getsnapshot(obj);
+% image(img);
+% if(photosave == 'y')
+% filephoto1= ['photo',int2str(i),'.jpg'];
+a=imread('stop.jpg');
+b = imread('stop.jpg');  %second img
+a = rgb2ind(a,16);
+b = rgb2ind(b,16);
+% 
+ c = corr2(a,b); 
+% d = sqrt(sum((b(:) - a(:)).^2)) / sqrt(sum(b(:).^2));
+% g(i)=c;%finding the correlation 
+if c==1
+    disp('img')
+    str='www.cchat.in/hack/addtrafficsign.php?level=stop';
+     web(str);
+end
